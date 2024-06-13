@@ -1,0 +1,16 @@
+/*=============== BUTTON ===============*/
+.button{
+   background-color: var(--second-color);
+   color: var(--second-color-dark);
+   font-weight: var(--font-semi-bold);
+   padding: .75rem 2rem;
+   border-radius: 4rem;
+   box-shadow: inset var(--shadow-button);
+
+   &__ghost{
+      background-color: transparent;
+      box-shadow: none;
+      border: 3px solid var(--second-color);
+      color: var(--second-color);
+   }
+}

@@ -1,0 +1,350 @@
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px){
+   .container{
+      margin-inline: 1rem;
+   }
+
+   .section__title{
+      font-size: var(--h2-font-size);
+   }
+   
+   .home{
+      &__title{
+         font-size: 3rem;
+      }
+      &__buttons{
+         flex-direction: column;
+         row-gap: 1rem;
+      }
+      &__circle{
+         width: 250px;
+         height: 250px;
+      }
+      &__subcircle{
+         width: 200px;
+         height: 200px;
+      }
+      &__images &__img{
+         width: 200px;
+      }
+   }
+
+   .products__content{
+      grid-template-columns: 160px;
+      justify-content: center;
+   }
+
+   .footer{
+      &__content{
+         grid-template-columns: 1fr;
+         justify-items: center;
+         row-gap: 1.5rem;
+      }
+      &__copy{
+         grid-column: 1;
+      }
+   }
+}
+
+/* For medium devices */
+@media screen and (min-width: 540px){
+   .home__container,
+   .favorites__container,
+   .care__container{
+      grid-template-columns: 370px;
+      justify-content: center;
+   }
+
+   .favorites__swiper{
+      max-width: 600px;
+      overflow-x: clip;
+      justify-self: center;
+   }
+
+   .products__content{
+      grid-template-columns: repeat(2, 160px);
+      justify-content: center;
+   }
+
+   .contact{
+      display: grid;
+      grid-template-columns: 450px;
+      justify-content: center;
+   }
+}
+
+@media screen and (min-width: 768px){
+   .products__content {
+      grid-template-columns: repeat(3, 160px);
+   }
+
+  .contact{
+      grid-template-columns: 550px;
+   }
+
+  .footer{
+      &__content{
+         grid-template-columns: repeat(3, max-content);
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__copy{
+         grid-column: initial;
+      }
+      &__link:nth-child(2){
+         order: 1;
+      }
+   }
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px){
+   .container{
+      margin-inline: auto;
+   }
+
+   .section{
+      padding-block: 7rem 2rem;
+
+      &__title{
+         margin-bottom: 2rem;
+      }
+   }
+
+   .nav{
+      height: calc(var(--header-height) + 2rem);
+
+      &__toggle,
+      &__close{
+         display: none;
+      }
+      &__link{
+         font-size: var(--normal-font-size);
+      }
+      &__menu{
+         display: flex;
+         column-gap: 3rem;
+         align-items: center;
+      }
+      &__list{
+         flex-direction: row;
+         column-gap: 4rem;
+      }
+   }
+
+   .home{
+      &__container{
+         grid-template-columns: 420px 585px;
+         align-items: center;
+         column-gap: 6rem;
+         padding-top: 5rem;
+      }
+      &__data{
+         text-align: initial;
+      }
+      &__title{
+         margin-bottom: 1.5rem;
+      }
+      &__description{
+         margin-bottom: 4rem;
+      }
+      &__buttons{
+         justify-content: initial;
+         column-gap: 1.5rem;
+      }
+      &__meat{
+         width: 80px;
+         top: 13rem;
+      }
+      &__circle{
+         width: 550px;
+         height: 550px;
+      }
+      &__subcircle{
+         width: 430px;
+         height: 430px;
+      }
+      &__images &__img{
+         width: 400px;
+      }
+      &__images img{
+         width: 95px;
+      }
+   }
+
+   .favorites{
+      &__container{
+         grid-template-columns: 520px;
+         row-gap: 4rem;
+      }
+      &__cheese-1,
+      &__cheese-2{
+         width: 80px;
+      }
+      &__cheese-1{
+         right: -18rem;
+      }
+      &__cheese-2{
+         left: -18rem;
+      }
+      &__swiper{
+         max-width: 1000px;
+      }
+      &__article,
+      &__img{
+         width: 320px;
+      }
+      &__leaf-1,
+      &__leaf-2{
+         width: 110px;
+      }
+   }
+
+   .care{
+      &__container{
+         grid-template-columns: 500px 410px;
+         column-gap: 6rem;
+         align-items: center;
+         padding-block: 4rem;
+      }
+      &__img{
+         width: 500px;
+         order: -1;
+      }
+      &__item{
+         column-gap: 1rem;
+
+         & i{
+            font-size: 2rem;
+         }
+      }
+   }
+
+   .banner{
+      padding-top: 4rem;
+
+      &__list{
+         column-gap: 6.5rem;
+      }
+      &__item{
+         column-gap: 1rem;
+
+         & i{
+            font-size: 4.5rem;
+         }
+         & span{
+            font-size: var(--h1-font-size);
+         }
+      }
+   }
+
+   .products{
+      &__container{
+         padding-top: 7.5rem;
+      }
+      &__content{
+         grid-template-columns: repeat(3, 250px);
+         gap: 10rem 4rem;
+      }
+      &__card{
+         padding: 11rem 2rem 2rem;
+         border-radius: 1.5rem;
+      }
+      &__img{
+         width: 170px;
+         top: -5rem;
+      }
+      &__subtitle{
+         font-size: var(--normal-font-size);
+      }
+      &__price{
+         font-size: var(--h3-font-size);
+      }
+      &__button{
+         right: 2rem;
+         bottom: 2rem;
+         padding: 6px;
+         font-size: 1.5rem;
+         border-radius: .5rem;
+      }
+      &__crab,
+      &__hamburger,
+      &__cheese{
+         width: 80px;
+      }
+      &__crab{
+         top: 2rem;
+      }
+      &__hamburger{
+         top: 30rem;
+         right: 3rem;
+      }
+      &__cheese{
+         left: 4rem;
+         margin: initial;
+      }
+   }
+
+   .contact{
+      display: block;
+
+      &__container{
+         border-radius: 4rem;
+      }
+      &__content{
+         grid-template: 330px / 360px 320px;
+         justify-content: center;
+         align-items: flex-start;
+         column-gap: 10rem;
+         padding-top: 2rem;
+      }
+      &__data{
+         text-align: initial;
+         grid-template: max-content / repeat(2, max-content);
+         gap: 3rem 2rem;
+      }
+      &__title{
+         margin-bottom: .75rem;
+      }
+      &__social{
+         justify-content: initial;
+      }
+      &__img{
+         width: 320px;
+         transform: translateY(-6rem);
+      }
+      &__shrimp, 
+      &__crab,
+      &__meat {
+         width: 80px;
+     }
+     &__shrimp{
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 20rem;
+     }
+     &__crab{
+      top: 5rem;
+      left: 4rem;
+     }
+     &__meat{
+      right: initial;
+      left: 12rem;
+      bottom: -1rem;
+     }
+   }
+
+   .footer{
+      padding-block: 5rem 3rem;
+
+      &__container{
+         row-gap: 3rem;
+      }
+   }
+
+   .scrollup{
+      right: 3rem;
+   }
+}

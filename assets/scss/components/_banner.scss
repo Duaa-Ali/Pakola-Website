@@ -1,0 +1,27 @@
+/*=============== BANNER ===============*/
+.banner{
+   padding-top: 3rem;
+
+   &__container{
+      background-color: var(--second-color);
+      padding: 1rem 1.5rem;
+   }
+   &__list{
+      display: flex;
+      justify-content: center;
+      column-gap: 1.5rem;
+   }
+   &__item{
+      color: var(--second-color-dark);
+      display: flex;
+      align-items: center;
+      column-gap: .5rem;
+
+      & i{
+         font-size: 1.5rem;
+      }
+      & span{
+         font: var(--small-font-size) var(--second-font);
+      }
+   }
+}

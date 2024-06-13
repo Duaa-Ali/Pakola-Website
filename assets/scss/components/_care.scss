@@ -1,0 +1,28 @@
+/*=============== CARE ===============*/
+.care{
+   background-color: var(--first-color-dark);
+
+   &__container{
+      row-gap: 3rem;
+      padding-block: 1rem 2rem;
+   }
+   &__list{
+      display: grid;
+      row-gap: 1.25rem;
+   }
+   &__item{
+      display: flex;
+      column-gap: .75rem;
+      align-items: center;
+
+      & i{
+         font-size: 1.5rem;
+         color: var(--second-color);
+      }
+   }
+   &__img{
+      width: 320px;
+      filter: var(--shadow-img);
+      justify-self: center;
+   }
+}

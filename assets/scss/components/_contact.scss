@@ -1,0 +1,62 @@
+/*=============== CONTACT ===============*/
+.contact{
+   &__container{
+      position: relative;
+      background-color: var(--first-color-darken);
+      padding-top: 3.5rem;
+      border-radius: 3rem;
+      box-shadow: inset var(--shadow-card);
+      overflow: hidden;
+   }
+   &__content{
+      padding-top: 1rem;
+      row-gap: 3rem;
+   }
+   &__data{
+      text-align: center;
+   }
+   &__title{
+      font: var(--font-regular) var(--h2-font-size) var(--second-font);
+      margin-bottom: .5rem;
+   }
+   &__social{
+      display: flex;
+      justify-content: center;
+      column-gap: .75rem;
+
+      & a{
+         color: var(--second-color);
+         font-size: 1.5rem;
+      }
+   }
+   &__info{
+      font-style: normal;
+   }
+   &__img{
+      width: 200px;
+      justify-self: center;
+      filter: var(--shadow-img);
+   }
+   &__shrimp,
+   &__crab,
+   &__meat{
+      position: absolute;
+      width: 40px;
+      opacity: .5;
+   }
+   &__shrimp{
+      top: 9rem;
+      right: 1.5rem;
+      rotate: 15deg;
+   }
+   &__crab{
+      top: 17rem;
+      left: 1rem;
+      rotate: 15deg;
+   }
+   &__meat{
+      right: 2rem;
+      bottom: 11rem;
+      rotate: -15deg;
+   }
+}
