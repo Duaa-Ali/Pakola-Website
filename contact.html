@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Login Page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="signupForm" onsubmit="return validateSignUp()">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="signinForm" onsubmit="return validateSignIn()">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Forget Your Password?</a>
+                <button type="submit" id="signInButton">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome, Friend!</h1>
+                    <p>Enter your personal details to use all site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app1.js"></script>
+    <script>
+        // Form Validation for Sign Up
+        function validateSignUp() {
+            var name = document.getElementById('container').querySelector('.sign-up input[type="text"]').value.trim();
+            var email = document.getElementById('container').querySelector('.sign-up input[type="email"]').value.trim();
+            var password = document.getElementById('container').querySelector('.sign-up input[type="password"]').value.trim();
+
+            if (!name || !email || !password) {
+                alert("Please fill in all fields for sign up.");
+                return false;
+            }
+
+            // Additional validation logic if needed
+
+            return true;
+        }
+
+        // Form Validation for Sign In
+        function validateSignIn() {
+            var email = document.getElementById('container').querySelector('.sign-in input[type="email"]').value.trim();
+            var password = document.getElementById('container').querySelector('.sign-in input[type="password"]').value.trim();
+
+            if (!email || !password) {
+                alert("Please fill in all fields for sign in.");
+                return false;
+            }
+
+            // Additional validation logic if needed
+
+            // Redirect to index.html after successful sign in
+            window.location.href = 'index.html';
+            
+            // Prevent form submission (we are redirecting manually)
+            return false;
+        }
+    </script>
+</body>
+
+</html>
